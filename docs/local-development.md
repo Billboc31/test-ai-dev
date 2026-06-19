@@ -8,7 +8,8 @@ generated_at: 2026-06-19
 
 - Git (branch-per-ticket workflow)
 - Claude Code CLI (for AI agent invocations)
-- TODO: verify — no package manager or runtime detected yet (`stack: unknown`)
+- Node.js 20 LTS
+- npm 10+
 
 ## Repository Setup
 
@@ -18,6 +19,25 @@ cd test-ai-dev
 ```
 
 No install step is needed for the framework itself — it is pure Markdown.
+
+## Running the Backend
+
+```bash
+cd backend
+npm install
+npm run dev       # start dev server with hot-reload (default port 3000)
+npm run build     # compile TypeScript to dist/
+npm test          # run test suite
+```
+
+Health check: `curl http://localhost:3000/health` → `{"status":"ok"}`
+
+Environment variables (optional, all have defaults):
+
+| Variable | Default | Description |
+|---|---|---|
+| `PORT` | `3000` | TCP port the server listens on |
+| `NODE_ENV` | `development` | Runtime environment |
 
 ## Running a Ticket Through the Workflow
 
@@ -84,4 +104,6 @@ Prompt: prompts/generic/memory-updater.md + ticket + plan + review
 
 ## Local URLs
 
-TODO: verify — no web server detected.
+| URL | Description |
+|---|---|
+| `http://localhost:3000/health` | Backend health check |
