@@ -4,7 +4,33 @@ generated_at: 2026-06-19
 
 # Project Overview
 
-## What This Project Does
+## What Is Being Built
+
+**test-ai-dev** is building a **personal task management web application** with a calendar-centric UX.
+
+Users plan, schedule, and track their personal tasks through a calendar interface. The primary metaphor is the calendar — tasks always appear in their temporal context — rather than a flat task list. The application targets individual productivity and is intentionally simple for V1.
+
+### V1 Feature Pillars
+
+| Feature | Description |
+|---|---|
+| Calendar view | Tasks displayed in day / week / month calendar views |
+| Task management | Create, edit, complete, and delete tasks; each task has a title and an optional due date/time |
+| Scheduling | Place a task on a specific date/time slot |
+| Responsive design | Usable on desktop and mobile browsers |
+| Personal use | Single-user, no login required for V1 |
+
+### Explicitly Out of Scope for V1
+
+- Social or sharing features (no followers, no shared calendars)
+- Collaboration (no multi-user editing, comments, or assignments)
+- Third-party calendar sync (Google Calendar, iCal, Outlook)
+- Microservices or distributed back-end architecture
+- Enterprise workflow engines or approval chains
+
+---
+
+## How This Project Is Built
 
 `test-ai-dev` is a scaffold for AI-driven software development using the **ai-dev-factory** framework. It provides a structured, auditable workflow in which AI agents play specialised roles — planning, coding, reviewing, testing, memory management, conflict resolution, and deploy fixing — each governed by explicit contracts (roles + skills) and producing versioned Markdown artefacts.
 

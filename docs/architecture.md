@@ -4,9 +4,39 @@ generated_at: 2026-06-19
 
 # Architecture
 
-## High-Level Structure
+## Application Architecture (V1 Intent)
 
-This repository is a **meta-project**: it defines the process and agents that will build the actual application, rather than containing the application itself. The architecture is therefore a *workflow architecture*, not a software system architecture.
+The application is a **web application** with a thin client and a lightweight server. No microservices. No enterprise workflow engine. The stack has not yet been selected (`stack: unknown`).
+
+### Intended structure
+
+```
+Browser (client)
+  └── Calendar UI               ← primary view; day / week / month
+        ├── Task list panel     ← sidebar or overlay listing tasks for the selected period
+        └── Task detail form    ← create / edit / complete / delete a task
+
+Server (HTTP API)
+  └── Task CRUD endpoints       ← create, read, update, delete tasks
+  └── (Storage TBD)             ← local file, embedded DB, or lightweight cloud store
+
+No back-end services beyond the HTTP API are planned for V1.
+```
+
+### Design constraints
+
+| Constraint | Rationale |
+|---|---|
+| Responsive design (mobile + desktop) | Core requirement; the app must be usable on any device |
+| Single-user, no auth for V1 | Eliminates auth/session complexity; personal productivity focus |
+| No microservices | Simplicity; V1 is a single deployable unit |
+| No third-party calendar sync | Out of scope; reduces external API dependencies |
+
+---
+
+## Workflow Architecture (AI Dev Factory)
+
+This repository is also a **meta-project**: it defines the process and agents that will build the actual application. The workflow architecture is described below.
 
 ```
 tickets/          ← work items (Markdown, one file per ticket)
