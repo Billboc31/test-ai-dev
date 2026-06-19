@@ -1,5 +1,5 @@
 {
   "failure_class": "planner_invalid",
-  "retry_count": 2,
-  "cooldown_until": "2026-06-19T21:00:52Z"
+  "retry_count": 3,
+  "cooldown_until": "2026-06-19T21:03:45Z"
 }
