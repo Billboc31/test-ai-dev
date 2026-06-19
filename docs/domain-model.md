@@ -107,9 +107,9 @@ A cross-cutting behavioural constraint that can be applied by any role. Stored i
 
 Persistent context shared across all ticket executions. Stored in `docs/ai/`.
 
-| File | Content |
-|---|---|
-| `global-context.md` | Stable project identity and invariants |
-| `project-life.md` | Living history of implemented changes (TODO: create) |
-| `workflow.md` | Workflow rules and conventions (TODO: create) |
-| `decisions-log.md` | Architectural decision log (TODO: create) |
+| File | Content | Status |
+|---|---|---|
+| `global-context.md` | Stable project identity and invariants | Present |
+| `project-life.md` | Living history of implemented changes | Present |
+| `decisions-log.md` | Architectural decision log | Present |
+| `workflow.md` | Workflow rules and conventions | **Missing** — create before first ticket |
