@@ -1,18 +1,33 @@
-The plan is written to `runs/T001/plan.md`. Here's a summary of what it proposes:
+The plan is written to `runs/T001/plan.md`. Here is a summary:
 
-**Technology stack selected:**
+---
+
+## Objective
+Resolve `stack: unknown` by documenting the chosen technology stack across all existing docs. No source code created.
+
+## Included
+**Stack selected:**
+
 | Layer | Choice |
 |---|---|
 | Frontend | React 18 + TypeScript + Vite |
 | Calendar | `react-big-calendar` |
-| Backend | Node.js 20 + Express 5 |
-| Database | SQLite (`better-sqlite3`) |
-| Deployment | Single process (backend serves static build + API) |
+| Backend | Node.js 20 LTS + Express 5 |
+| Database | SQLite via `better-sqlite3` |
+| Deployment | Single process — Express serves the Vite build + API |
 
-**8 documentation files to update** (no source code created):
-- `.ai-dev-factory/project.yml` — resolve `stack: unknown`
-- `docs/architecture.md`, `docs/project-overview.md`, `docs/dependencies.md`, `docs/deployment.md`, `docs/local-development.md` — fill all stack-related TODOs/placeholders
-- `docs/ai/global-context.md` — update stack description, remove known risk entry
+**8 documentation files to update** (placeholders and TODOs only):
+- `.ai-dev-factory/project.yml` — `stack: unknown` → `react-ts-express-sqlite`
+- `docs/architecture.md`, `docs/project-overview.md`, `docs/dependencies.md`, `docs/deployment.md`, `docs/local-development.md`
+- `docs/ai/global-context.md` — remove the `stack: unknown` known risk
 - `docs/ai/decisions-log.md` — add ADR-002
 
-The stack rationale: SQLite keeps it zero-dependency for a single-user V1; Node + Express matches the frontend language (TypeScript throughout); React + Vite is the pragmatic choice with the best calendar library ecosystem. All choices are replaceable in a future ticket if you disagree with any of them.
+## Excluded
+Creating any source files (`package.json`, `src/`, etc.), defining the DB schema, defining the API surface, CI/CD pipeline, cloud deployment, and `docs/ai/workflow.md` (flagged for a separate T002).
+
+## Acceptance criteria
+All 8 docs updated; no source files touched; `stack: unknown` eliminated everywhere; ADR-002 recorded.
+
+---
+
+Ready for `PLAN_APPROVED` before the Coder proceeds.
