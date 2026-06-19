@@ -6,13 +6,11 @@ generated_at: 2026-06-19
 
 ## Missing Memory Files
 
-These files are referenced by agent prompts but do not yet exist. Agents will fail or produce incomplete output without them.
-
-| File | Referenced In | Action |
+| File | Status | Action |
 |---|---|---|
-| `docs/ai/project-life.md` | `ai/templates/prompt-template.md` | Create at first ticket close |
-| `docs/ai/workflow.md` | `ai/templates/prompt-template.md` | Create before first ticket |
-| `docs/ai/decisions-log.md` | `ai/roles/memory-updater.md` | Create at first ticket close |
+| `docs/ai/project-life.md` | **Present** (initialised 2026-06-19) | Maintain after each ticket |
+| `docs/ai/decisions-log.md` | **Present** (initialised 2026-06-19) | Maintain after each ticket |
+| `docs/ai/workflow.md` | **Missing** — referenced by `ai/templates/prompt-template.md` | Create before first ticket |
 
 ## Undetermined Stack
 
@@ -54,6 +52,7 @@ The repository has no test files. The testing strategy documents the intent but 
 - The exact model or LLM CLI used for agent invocations (`AI_DEV_FACTORY_EXEC_CMD`)
 - Whether `runs/` artefacts follow a specific subdirectory convention (e.g., `runs/<ticket-id>/`)
 - Language convention: French is used in role files, English in generic prompts — the expected language per ticket type is not explicitly documented
+- Commit signing: no Git config detected
 
 ## Technical Debt Risks
 

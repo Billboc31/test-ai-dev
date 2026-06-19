@@ -76,9 +76,9 @@ Prompt: prompts/generic/memory-updater.md + ticket + plan + review
 | Path | Purpose |
 |---|---|
 | `docs/ai/global-context.md` | Loaded by every agent — project identity |
-| `docs/ai/project-life.md` | Living project history (TODO: create) |
+| `docs/ai/project-life.md` | Living project history |
 | `docs/ai/workflow.md` | Workflow rules reference (TODO: create) |
-| `docs/ai/decisions-log.md` | Architectural decisions log (TODO: create) |
+| `docs/ai/decisions-log.md` | Architectural decisions log |
 | `runs/` | Execution artefacts per ticket |
 | `tickets/` | Incoming work items |
 

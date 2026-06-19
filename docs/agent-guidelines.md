@@ -13,7 +13,7 @@ Every AI agent operating in this repository must be **bounded, auditable, and re
 Every agent invocation must begin by reading:
 
 1. `docs/ai/global-context.md` — project identity and stable invariants
-2. `docs/ai/project-life.md` — living history (create if absent)
+2. `docs/ai/project-life.md` — living history
 3. `docs/ai/workflow.md` — workflow rules (create if absent)
 4. The relevant role file: `ai/roles/<role>.md`
 5. The relevant skill files: `ai/skills/<skill>.md`

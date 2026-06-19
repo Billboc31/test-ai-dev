@@ -20,25 +20,20 @@ This file is the project identity record. Update `stack` once a technology is se
 
 ### `docs/ai/global-context.md`
 
-Loaded by every agent at invocation time. Currently contains:
-
-```
-project_id: test-ai-dev
-repo: git@github.com:Billboc31/test-ai-dev.git
-```
+Loaded by every agent at invocation time. Contains project identity, stack, architecture invariants, conventions, and known risks.
 
 Add stable invariants here (architecture rules, naming conventions, domain terms) as the project matures.
 
-## Expected Memory Files (Not Yet Created)
+## Memory Files Status
 
 The prompt template (`ai/templates/prompt-template.md`) instructs agents to read:
 
 | File | Purpose | Status |
 |---|---|---|
-| `docs/ai/global-context.md` | Project identity + invariants | Present |
-| `docs/ai/project-life.md` | Living history of decisions | **Missing** — create at first ticket |
-| `docs/ai/workflow.md` | Workflow rules and conventions | **Missing** — create at first ticket |
-| `docs/ai/decisions-log.md` | Architectural decisions log | **Missing** — create at first ticket |
+| `docs/ai/global-context.md` | Project identity + invariants | **Present** |
+| `docs/ai/project-life.md` | Living history of decisions | **Present** (initialised 2026-06-19) |
+| `docs/ai/decisions-log.md` | Architectural decisions log | **Present** (initialised 2026-06-19) |
+| `docs/ai/workflow.md` | Workflow rules and conventions | **Missing** — create before first ticket |
 
 ## Environment Variables
 

@@ -40,7 +40,8 @@ ai/
   skills/               cross-cutting behavioural constraints (applied by roles)
   templates/            canonical Markdown output schemas
 docs/
-  ai/                   project memory (global-context, project-life, workflow, decisions-log)
+  ai/                   project memory (global-context, project-life, decisions-log)
+  *.md                  generated documentation files
 prompts/
   generic/              pre-built prompts for each role — the actual LLM invocation payloads
 runs/                   per-ticket execution artefacts (plans, reviews, test results)
