@@ -50,3 +50,14 @@
 [2026-06-19T20:15:33Z] compose: extra-context=runs/T001/fixes/context-20260619T201533Z.md
 [2026-06-19T20:15:33Z] snapshot: runtime-prompt=runs/T001/prompts/planner-attempt-3.md
 [2026-06-19T20:16:40Z] auto-run: step=planner done rc=0
+[2026-06-19T20:16:42Z] planner checkpoint: committed
+[2026-06-19T20:16:42Z] planner checkpoint: pushed
+[2026-06-19T20:16:42Z] planner validation success
+[2026-06-19T20:16:42Z] auto-run: transition PLAN_FIX_REQUIRED → PLAN_REVIEW_NEEDED
+[2026-06-19T20:16:42Z] auto-run: auto-commit triggered (step=planner, include_code=True)
+[2026-06-19T20:16:42Z] commit-checkpoint: unstaged runtime garbage: ['runs/T001/runtime.log']
+[2026-06-19T20:16:42Z] commit-checkpoint: sha=264840b files=2 title='docs(T001/workflow): planner — update 2 file(s)'
+[2026-06-19T20:16:42Z] auto-run: auto-push triggered
+[2026-06-19T20:16:42Z] push: tolerating runtime dirty files (not blocking): ['runs/T001/runtime.log']
+[2026-06-19T20:16:42Z] push: pushing branch=ticket/T001-t001-define-technical-architecture-and-technology
+[2026-06-19T20:16:44Z] push: done branch=ticket/T001-t001-define-technical-architecture-and-technology
