@@ -1,9 +1,9 @@
-The corrected plan is written to `runs/T002/plan.md`. It now:
+The plan is written to `runs/T002/plan.md`. It:
 
-- Uses Node.js 20 LTS + TypeScript + Express 5 (the T001 stack), with no Python/FastAPI references
-- Plans the right file set: `package.json`, `tsconfig.json`, `src/app.ts`, `src/server.ts`, `src/config.ts`, `src/routes/health.ts`, `tests/health.test.ts`
-- Uses `npm install / npm run dev / npm run build / npm test` (Vitest + Supertest) in acceptance criteria
-- Keeps SQLite noted as "ready later" without introducing any DB wiring in this ticket
-- Remains strictly scoped: no CRUD, no migrations, no frontend, no auth
+- Uses Node.js 20 LTS + TypeScript + Express 5 exclusively (no Python/FastAPI)
+- Covers all required artifacts: `package.json`, `tsconfig.json`, `src/app.ts`, `src/server.ts`, `src/config.ts`, `src/routes/health.ts`, `tests/health.test.ts`, `.gitignore`, and a `docs/local-development.md` update
+- Scopes to the health endpoint + config loading + test scaffold only — no CRUD, no DB, no auth
+- Includes 8 verifiable acceptance criteria using `npm` commands (Vitest + Supertest)
+- Is structured with exactly the four required headings
 
-Ready for `PLAN_APPROVED` once confirmed.
+Ready for `PLAN_APPROVED`.
