@@ -6,7 +6,7 @@ generated_at: 2026-06-19
 
 ## Current State
 
-No application deployment pipeline exists yet (`stack: unknown`, no source code). The information below covers the factory's deployment infrastructure as inferred from the `deployer-fixer` role.
+No application deployment pipeline exists yet (stack selected in T001, no source code). The information below covers the factory's deployment infrastructure as inferred from the `deployer-fixer` role.
 
 ## Sandbox Validation Pipeline
 
@@ -40,13 +40,23 @@ When smoke tests fail:
 
 The fixer may only modify files under `.ai-dev-factory/scripts/` and deploy profile files (`deploy.yml`). Application source files are out of scope for the fixer.
 
-## Application Deployment
+## Application Deployment (V1 Model)
 
-TODO: define once stack and infrastructure are chosen. Document:
-- Build command
-- Deploy target (cloud provider, container registry, etc.)
-- Environment promotion strategy (staging → production)
-- Rollback procedure
+**Model**: single process — Express (Node.js) serves both the REST API (`/api/*`) and the Vite production build (static files).
+
+```
+npm run build          # Vite bundles the React frontend into dist/
+node server/index.js   # Express starts; serves dist/ + /api routes
+```
+
+**Why a single process for V1**: zero infrastructure overhead for a personal app with a single user. No reverse proxy, no container orchestration, no separate static CDN needed.
+
+**Split triggers** — separate the frontend and backend when any of the following applies:
+- Multi-user or hosted deployment (independent scaling needed)
+- Frontend requires a CDN for latency-sensitive delivery
+- The API surface grows large enough to warrant independent deployment
+
+Deploy target, environment promotion strategy, and rollback procedure are to be defined in a future ticket once the deployment environment is chosen.
 
 ## Safety Rules
 

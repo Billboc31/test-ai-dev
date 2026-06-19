@@ -36,14 +36,17 @@ Users plan, schedule, and track their personal tasks through a calendar interfac
 
 The repository does not contain application source code yet. It is the *operating system* for a project: the rules, roles, templates, and prompts that coordinate AI agents safely.
 
-## Detected Stack
+## Stack
 
 | Layer | Technology |
 |---|---|
-| Language | Not yet determined (`stack: unknown` in `project.yml`) |
-| AI agents | Claude Code (inferred from ai-dev-factory tooling) |
+| Frontend | React 18 + TypeScript + Vite |
+| Calendar UI | `react-big-calendar` |
+| Backend | Node.js 20 LTS + Express 5 |
+| Database | SQLite via `better-sqlite3` |
+| Deployment | Single process — Express serves the Vite build + REST API |
+| AI agents | Claude Code |
 | Workflow artefacts | Markdown files versioned in Git |
-| Package manager | TODO: verify — none detected yet |
 
 ## Main Runtime Components
 
