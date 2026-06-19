@@ -61,3 +61,23 @@
 [2026-06-19T20:16:42Z] push: tolerating runtime dirty files (not blocking): ['runs/T001/runtime.log']
 [2026-06-19T20:16:42Z] push: pushing branch=ticket/T001-t001-define-technical-architecture-and-technology
 [2026-06-19T20:16:44Z] push: done branch=ticket/T001-t001-define-technical-architecture-and-technology
+[2026-06-19T20:34:20Z] auto-run start: state=IMPLEMENTATION_APPROVED
+[2026-06-19T20:34:20Z] auto-run: running step=tester
+[2026-06-19T20:34:20Z] prompt: resolved=prompts/generic/tester.md source=generic
+[2026-06-19T20:34:20Z] prompt: generic fallback — injecting runs/T001/ticket.md
+[2026-06-19T20:34:20Z] compose: global-context=docs/ai/global-context.md
+[2026-06-19T20:34:20Z] compose: role=ai/roles/tester.md
+[2026-06-19T20:34:20Z] compose: skill=ai/skills/workflow-discipline.md
+[2026-06-19T20:34:20Z] compose: skill=ai/skills/testing.md
+[2026-06-19T20:34:20Z] compose: skill=ai/skills/debugging.md
+[2026-06-19T20:34:20Z] compose: task (canonical prompt)
+[2026-06-19T20:34:20Z] snapshot: runtime-prompt=runs/T001/prompts/tester-attempt-1.md
+[2026-06-19T20:35:48Z] auto-run: step=tester done rc=0
+[2026-06-19T20:35:48Z] auto-run: transition IMPLEMENTATION_APPROVED → TEST_COMPLETE
+[2026-06-19T20:35:48Z] auto-run: auto-commit triggered (step=tester, include_code=True)
+[2026-06-19T20:35:48Z] commit-checkpoint: unstaged runtime garbage: ['runs/T001/runtime.log']
+[2026-06-19T20:35:48Z] commit-checkpoint: sha=d8e8cf3 files=5 title='test(T001/workflow): tester — update 5 file(s)'
+[2026-06-19T20:35:48Z] auto-run: auto-push triggered
+[2026-06-19T20:35:48Z] push: tolerating runtime dirty files (not blocking): ['runs/T001/runtime.log']
+[2026-06-19T20:35:48Z] push: pushing branch=ticket/T001-t001-define-technical-architecture-and-technology
+[2026-06-19T20:35:50Z] push: done branch=ticket/T001-t001-define-technical-architecture-and-technology
