@@ -7,6 +7,30 @@
 - **primary language/stack**: Not yet determined (`stack: unknown` in `.ai-dev-factory/project.yml`). The framework itself is pure Markdown.
 - **bootstrapped**: 2026-06-18
 
+## Product Vision
+
+**test-ai-dev** will produce a **web application for personal task management with a calendar-centric experience**.
+
+### Core idea
+
+Users plan, schedule, and track their personal tasks through a calendar interface. The primary UX metaphor is the calendar, not a flat task list. Tasks are created with a due date/time and are always visible in their temporal context.
+
+### V1 feature pillars
+
+- **Calendar view**: tasks displayed in a calendar (day, week, month)
+- **Task management**: create, edit, complete, and delete tasks; each task has a title and an optional due date/time
+- **Scheduling**: assign a task to a specific date/time slot
+- **Responsive design**: usable on desktop and mobile browsers
+- **Personal use**: single-user, no authentication required for V1
+
+### Explicitly out of scope for V1
+
+- Social or sharing features
+- Collaboration (multi-user, comments, assignments)
+- Microservices or distributed architecture
+- Enterprise workflow engines
+- Third-party calendar sync (Google Calendar, iCal, etc.)
+
 ## Purpose
 
 `test-ai-dev` is the operating environment for AI-driven software development using the **ai-dev-factory** framework. It defines the roles, skills, templates, and prompts that coordinate specialised AI agents (Planner, Coder, Reviewer, Tester, Memory Updater, Risk Classifier, Conflict Resolver, Deployer Fixer) in a bounded, auditable, and reversible workflow. The repository does not yet contain application source code — it is the scaffold that will govern whatever application is built inside it.
