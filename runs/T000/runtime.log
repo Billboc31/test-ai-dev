@@ -21,3 +21,23 @@
 [2026-06-19T19:19:13Z] push: tolerating runtime dirty files (not blocking): ['runs/T000/runtime.log']
 [2026-06-19T19:19:13Z] push: pushing branch=ticket/T000-t000-define-project-vision-and-populate-ai-project
 [2026-06-19T19:19:14Z] push: done branch=ticket/T000-t000-define-project-vision-and-populate-ai-project
+[2026-06-19T19:33:42Z] auto-run start: state=IMPLEMENTATION_APPROVED
+[2026-06-19T19:33:42Z] auto-run: running step=tester
+[2026-06-19T19:33:42Z] prompt: resolved=prompts/generic/tester.md source=generic
+[2026-06-19T19:33:42Z] prompt: generic fallback — injecting runs/T000/ticket.md
+[2026-06-19T19:33:42Z] compose: global-context=docs/ai/global-context.md
+[2026-06-19T19:33:42Z] compose: role=ai/roles/tester.md
+[2026-06-19T19:33:42Z] compose: skill=ai/skills/workflow-discipline.md
+[2026-06-19T19:33:42Z] compose: skill=ai/skills/testing.md
+[2026-06-19T19:33:42Z] compose: skill=ai/skills/debugging.md
+[2026-06-19T19:33:42Z] compose: task (canonical prompt)
+[2026-06-19T19:33:42Z] snapshot: runtime-prompt=runs/T000/prompts/tester-attempt-1.md
+[2026-06-19T19:35:20Z] auto-run: step=tester done rc=0
+[2026-06-19T19:35:20Z] auto-run: transition IMPLEMENTATION_APPROVED → TEST_COMPLETE
+[2026-06-19T19:35:20Z] auto-run: auto-commit triggered (step=tester, include_code=True)
+[2026-06-19T19:35:20Z] commit-checkpoint: unstaged runtime garbage: ['runs/T000/runtime.log']
+[2026-06-19T19:35:20Z] commit-checkpoint: sha=6e0a9a5 files=5 title='test(T000/workflow): tester — update 5 file(s)'
+[2026-06-19T19:35:20Z] auto-run: auto-push triggered
+[2026-06-19T19:35:20Z] push: tolerating runtime dirty files (not blocking): ['runs/T000/runtime.log']
+[2026-06-19T19:35:20Z] push: pushing branch=ticket/T000-t000-define-project-vision-and-populate-ai-project
+[2026-06-19T19:35:22Z] push: done branch=ticket/T000-t000-define-project-vision-and-populate-ai-project
