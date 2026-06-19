@@ -4,23 +4,27 @@ generated_at: 2026-06-19
 
 # Architecture
 
-## Application Architecture (V1 Intent)
+## Application Architecture (V1)
 
-The application is a **web application** with a thin client and a lightweight server. No microservices. No enterprise workflow engine. The stack has not yet been selected (`stack: unknown`).
+The application is a **web application** with a thin React client and a lightweight Express server. No microservices. No enterprise workflow engine.
 
-### Intended structure
+**Selected stack**: React 18 + TypeScript + Vite (frontend) · Node.js 20 LTS + Express 5 (backend) · SQLite via `better-sqlite3` (database) · single-process deployment.
+
+### Structure
 
 ```
 Browser (client)
-  └── Calendar UI               ← primary view; day / week / month
-        ├── Task list panel     ← sidebar or overlay listing tasks for the selected period
-        └── Task detail form    ← create / edit / complete / delete a task
+  └── React 18 + TypeScript (Vite build)
+        └── Calendar UI                  ← react-big-calendar; day / week / month views
+              ├── Task list panel        ← sidebar or overlay for the selected period
+              └── Task detail form       ← create / edit / complete / delete a task
 
-Server (HTTP API)
-  └── Task CRUD endpoints       ← create, read, update, delete tasks
-  └── (Storage TBD)             ← local file, embedded DB, or lightweight cloud store
+Server (Node.js 20 LTS + Express 5)
+  └── Task CRUD endpoints  (/api/tasks)  ← REST API
+  └── SQLite database                    ← better-sqlite3; single file on disk
+  └── Static file serving               ← serves the Vite production build
 
-No back-end services beyond the HTTP API are planned for V1.
+Single process: Express handles both the API and the frontend static assets.
 ```
 
 ### Design constraints
