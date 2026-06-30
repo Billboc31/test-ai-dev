@@ -4,41 +4,7 @@ generated_at: 2026-06-19
 
 # Domain Model
 
-## Application Domain Concepts
-
-These are the core concepts of the **task management application** being built. They are defined at a conceptual level — no code or data schema detail.
-
-### Task
-
-The fundamental unit of work a user wants to accomplish.
-
-| Attribute | Type | Notes |
-|---|---|---|
-| Title | Text | Required; short description of what to do |
-| Due date/time | Date + optional time | Optional; determines where the task appears in the calendar |
-| Status | Enum | `pending` / `done` |
-
-A Task with no due date is "unscheduled" and appears in an inbox or backlog panel outside the calendar grid.
-
-### Calendar
-
-The primary view of the application. Displays Tasks in their temporal context across day, week, and month views.
-
-The Calendar does not own Tasks — it is a **lens** over the set of Tasks that have a due date/time, rendering them in the appropriate time slots.
-
-### Scheduling
-
-The act of assigning a due date/time to a Task, or moving a Task from one slot to another. Scheduling places a Task on the Calendar.
-
-An unscheduled Task can be scheduled by:
-1. Editing the task and setting a due date/time.
-2. Dragging the task from the backlog panel to a calendar slot (target interaction for V1 UX).
-
----
-
-## AI Dev Factory Domain Concepts
-
-The following entities belong to the **AI Dev Factory workflow** that governs how the application is built, not to the application itself.
+## Core Entities
 
 ### Ticket
 
