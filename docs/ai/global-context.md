@@ -4,7 +4,7 @@
 
 - **project_id**: test-ai-dev
 - **repository**: git@github.com:Billboc31/test-ai-dev.git
-- **primary language/stack**: React 18 + TypeScript + Vite (frontend) · Node.js 20 LTS + Express 5 (backend) · SQLite via `better-sqlite3` (database). Stack identifier: `react-ts-express-sqlite`.
+- **primary language/stack**: Not yet determined (`stack: unknown` in `.ai-dev-factory/project.yml`). The framework itself is pure Markdown.
 - **bootstrapped**: 2026-06-18
 
 ## Product Vision
@@ -117,15 +117,16 @@ $EDITOR tickets/T001-my-feature.md
 3. `docs/ai/workflow.md` — workflow rules (TODO: create before first ticket)
 4. `docs/ai/decisions-log.md` — architectural decisions log
 
-**No build, lint, or test commands exist** — no application source code is present yet. Stack is defined (T001); first implementation ticket will introduce `package.json` and the project scaffold.
+**No build, lint, or test commands exist** — no application source code is present yet.
 
 ## Known Risks & TODOs
 
 - `docs/ai/workflow.md` — still missing; must be created before the first ticket is processed
+- `stack: unknown` — no technology stack has been selected; blocks defining build/test/deploy commands
 - `run_sandbox.py` and `.ai-dev-factory/scripts/` — referenced by `deployer-fixer` role but not present in the repository
 - `deploy.yml` — referenced by `deployer-fixer` role but not present
 - `AI_DEV_FACTORY_EXEC_CMD` — environment variable for sandbox LLM invocations; value and security implications not yet documented
 - No `.github/workflows/` — workflow gates are enforced by convention only, not automated CI
 - No `.gitignore` confirmed for secrets/credentials files
 - TODO: verify commit signing configuration
-- TODO: define secrets management approach (stack chosen: Node.js + SQLite; no external services yet)
+- TODO: define secrets management approach when stack is chosen

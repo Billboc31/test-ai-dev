@@ -8,8 +8,7 @@ generated_at: 2026-06-19
 
 - Git (branch-per-ticket workflow)
 - Claude Code CLI (for AI agent invocations)
-- Node.js 20 LTS (runtime for backend and Vite build)
-- npm (package manager; bundled with Node.js)
+- TODO: verify — no package manager or runtime detected yet (`stack: unknown`)
 
 ## Repository Setup
 
@@ -85,9 +84,4 @@ Prompt: prompts/generic/memory-updater.md + ticket + plan + review
 
 ## Local URLs
 
-| URL | Purpose |
-|---|---|
-| `http://localhost:3000` | Express server (API + frontend in production mode) |
-| `http://localhost:5173` | Vite dev server (frontend only, with HMR) |
-
-Exact ports may be configured per ticket once the project is scaffolded.
+TODO: verify — no web server detected.
