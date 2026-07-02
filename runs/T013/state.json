@@ -1,0 +1,7 @@
+{
+  "ticket_id": "T013",
+  "state": "INIT",
+  "branch": "ticket/T013-t013-add-sqlite-database-layer-and-migrations",
+  "issue_number": 14,
+  "updated_at": "2026-07-02T18:35:27Z"
+}
